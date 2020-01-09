@@ -15,7 +15,8 @@
         "laravel-mix": "^1.0",
         "laravel-nova": "^1.0",
         "react": "^16.12.0",
-        "react-dom": "^16.12.0"
+        "react-dom": "^16.12.0",
+        "serialize-javascript": "^2.1.2"
     },
     "dependencies": {
         "vue": "^2.5.0"
