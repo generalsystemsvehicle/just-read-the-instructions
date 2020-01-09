@@ -1,5 +1,7 @@
 <template>
-    <panel-item :field="field" class="gutenberg__content wp-embed-responsive" />
+    <div class="gutenberg__content wp-embed-responsive">
+        <panel-item :field="field" />
+    </div>
 </template>
 
 <script>
