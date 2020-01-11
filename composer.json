@@ -20,7 +20,10 @@
         "laravel": {
             "providers": [
                 "GeneralSystemsVehicle\\JustReadTheInstructions\\FieldServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "JustReadTheInstructions": "GeneralSystemsVehicle\\JustReadTheInstructions\\Facade"
+            }
         }
     },
     "config": {

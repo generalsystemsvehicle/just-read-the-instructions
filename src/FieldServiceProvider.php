@@ -2,6 +2,7 @@
 
 namespace GeneralSystemsVehicle\JustReadTheInstructions;
 
+use App;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
@@ -25,7 +26,9 @@ class FieldServiceProvider extends ServiceProvider
             Nova::script('justreadtheinstructions', __DIR__.'/../dist/js/field.js');
         });
 
-        $this->publishes([__DIR__ . '/../dist/css/just-read-the-instructions.css' => public_path('vendor/just-read-the-instructions/gutenberg.css')], 'public');
+        $src = __DIR__ . '/../dist/css/just-read-the-instructions.css';
+        $dst = public_path('vendor/just-read-the-instructions/gutenberg.css');
+        $this->publishes([$src => $dst], 'public');
     }
 
     /**
@@ -36,5 +39,9 @@ class FieldServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(base_path('vendor/van-ons/laraberg/src/config/laraberg.php'), 'laraberg');
+
+        App::bind('JustReadTheInstructions-helper',function() {
+           return new Helper;
+        });
     }
 }
