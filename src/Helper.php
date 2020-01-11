@@ -7,8 +7,11 @@ use VanOns\Laraberg\Helpers\EmbedHelper;
 
 class Helper
 {
-    public function render(string $html)
+    public function render(string $html, bool $wrapHtml = true)
     {
-        return BlockHelper::renderBlocks(EmbedHelper::renderEmbeds($html));
+        $rendered = $wrapHtml ? '<div class="gutenberg__content wp-embed-responsive">' : '';
+        $rendered .= BlockHelper::renderBlocks(EmbedHelper::renderEmbeds($html));
+        $rendered .= $wrapHtml ? '</div>' : '';
+        return $rendered;
     }
 }
