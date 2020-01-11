@@ -24,6 +24,8 @@ class FieldServiceProvider extends ServiceProvider
             Nova::style('justreadtheinstructions-jrti-css', __DIR__.'/../dist/css/just-read-the-instructions.css');
             Nova::script('justreadtheinstructions', __DIR__.'/../dist/js/field.js');
         });
+
+        $this->publishes([__DIR__ . '/../dist/css/just-read-the-instructions.css' => public_path('vendor/just-read-the-instructions/gutenberg.css')], 'public');
     }
 
     /**
