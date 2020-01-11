@@ -28,6 +28,7 @@ After doing so, run these terminal commands:
 
 ```sh
 composer install
+art vendor:publish --provider="GeneralSystemsVehicle\JustReadTheInstructions\FieldServiceProvider" --tag="public"
 php artisan vendor:publish --tag=lfm_config
 php artisan vendor:publish --tag=lfm_public
 ```
@@ -60,12 +61,10 @@ Note also the `->asHtml()` on the end of the field's make statement. If you do n
 
 #### Blade view(s)
 
-When you output your `content` data from the above example, you need to wrap it in a container with some specific classes in order to get the CSS to apply correctly. Example:
+When you output your `content` data from the above example, you will need to render it through the rendering engine. You can do this with the helper noted here:
 
 ```html
-<div class="gutenberg__content wp-embed-responsive">
-  {!! $m->content !!}
-</div>
+{!! JustReadTheInstructions::render( $m->content ) !!}
 ```
 
 You will also need to include the correct CSS for this, place the below tag in the header somewhere:
