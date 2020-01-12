@@ -22,4 +22,17 @@ class JustReadTheInstructions extends Field
     {
         return $this->withMeta(['asHtml' => true]);
     }
+
+    /**
+     * Resolve the field's value for display.
+     *
+     * @param  mixed  $resource
+     * @param  string|null  $attribute
+     * @return void
+     */
+    public function resolveForDisplay($resource, $attribute = null)
+    {
+        parent::resolveForDisplay($resource, $attribute);
+        $this->value = (new Helper)->render($this->value);
+    }
 }
