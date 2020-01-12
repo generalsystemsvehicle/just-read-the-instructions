@@ -1,6 +1,6 @@
 # Just Read The instructions
 
-## A Laravel Nova component for using Wordpress Gutenberg a field
+## [Wordpress Gutenberg](https://wordpress.org/gutenberg/) as a Laravel Nova field type
 
 ### Installation
 
