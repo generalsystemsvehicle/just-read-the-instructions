@@ -2,6 +2,10 @@
 
 ## [Wordpress Gutenberg](https://wordpress.org/gutenberg/) as a Laravel Nova field type
 
+### Credits
+
+This plugin stands on the shoulders of [Laraberg](https://github.com/VanOns/laraberg/), which provides the basic integration of Laraberg, Laravel-Filemanager and the Laravel world.
+
 ### Installation
 
 Add the setting for a repository in your `composer.json` file. Edit it and make sure you have a block that looks like this:
