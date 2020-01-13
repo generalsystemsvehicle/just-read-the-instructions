@@ -23,7 +23,6 @@ If you already have a repositories section, just insert the needed object. Then 
 
 ```json
 "require": {
-    ...
     "general-systems-vehicle/just-read-the-instructions": "dev-master"
 },
 ```
