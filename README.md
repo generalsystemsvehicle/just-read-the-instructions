@@ -1,4 +1,4 @@
-# Just Read The instructions
+# Just Read The Instructions
 
 ## [Wordpress Gutenberg](https://wordpress.org/gutenberg/) as a Laravel Nova field type
 
