@@ -4,34 +4,20 @@
 
 ### Credits
 
-This plugin stands on the shoulders of [Laraberg](https://github.com/VanOns/laraberg/), which provides the basic integration of Laraberg, Laravel-Filemanager and the Laravel world.
+This plugin stands on the shoulders of [Laraberg](https://github.com/VanOns/laraberg/), which provides the basic integration of Gutenberg, Laravel-Filemanager and the Laravel world.
 
 ### Installation
 
-Add the setting for a repository in your `composer.json` file. Edit it and make sure you have a block that looks like this:
-
-```json
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/generalsystemsvehicle/just-read-the-instructions"
-    }
-]
-```
-
-If you already have a repositories section, just insert the needed object. Then add to your `composer.json` the needed `require` block for this repo:
-
-```json
-"require": {
-    "general-systems-vehicle/just-read-the-instructions": "dev-master"
-},
-```
-
-After doing so, run these terminal commands:
+Install the composer package:
 
 ```sh
-composer install
-art vendor:publish --provider="GeneralSystemsVehicle\JustReadTheInstructions\FieldServiceProvider" --tag="public"
+composer require generalsystemsvehicle/just-read-the-instructions
+```
+
+Publish configurations and assets for the Just Read The Instructions as well as Laravel Filemanager:
+
+```sh
+php artisan vendor:publish --provider="GeneralSystemsVehicle\JustReadTheInstructions\FieldServiceProvider" --tag="public"
 php artisan vendor:publish --tag=lfm_config
 php artisan vendor:publish --tag=lfm_public
 ```
@@ -75,6 +61,6 @@ You will also need to include the correct CSS for this, place the below tag in t
 ```html
 <link
   rel="stylesheet"
-  href="{{ asset('vendor/just-read-the-instructions/css/just-read-the-instructions.css') }}"
+  href="{{ asset('vendor/just-read-the-instructions/gutenberg.css') }}"
 />
 ```

@@ -1,34 +1,45 @@
 {
-    "name": "general-systems-vehicle/just-read-the-instructions",
-    "description": "A Laravel Nova field.",
-    "keywords": [
-        "laravel",
-        "nova"
-    ],
-    "license": "MIT",
-    "require": {
-        "php": ">=7.1.0",
-        "unisharp/laravel-filemanager": "^1.9",
-        "van-ons/laraberg": "~1.0.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "GeneralSystemsVehicle\\JustReadTheInstructions\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "GeneralSystemsVehicle\\JustReadTheInstructions\\FieldServiceProvider"
-            ],
-            "aliases": {
-                "JustReadTheInstructions": "GeneralSystemsVehicle\\JustReadTheInstructions\\Facade"
-            }
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "generalsystemsvehicle/just-read-the-instructions",
+  "description": "Wordpress Gutenberg](https://wordpress.org/gutenberg/) as a Laravel Nova field type",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "nova"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/generalsystemsvehicle/just-read-the-instructions",
+  "readme": "README.md",
+  "authors": [
+    {
+      "name": "Lee Hilton",
+      "email": "lee.hilton@leezilla.net",
+      "homepage": "https://leezilla.net",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "unisharp/laravel-filemanager": "^1.9",
+    "van-ons/laraberg": "~1.0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "GeneralSystemsVehicle\\JustReadTheInstructions\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GeneralSystemsVehicle\\JustReadTheInstructions\\FieldServiceProvider"
+      ],
+      "aliases": {
+        "JustReadTheInstructions": "GeneralSystemsVehicle\\JustReadTheInstructions\\Facade"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
