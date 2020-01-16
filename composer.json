@@ -1,6 +1,6 @@
 {
   "name": "generalsystemsvehicle/just-read-the-instructions",
-  "description": "Wordpress Gutenberg](https://wordpress.org/gutenberg/) as a Laravel Nova field type",
+  "description": "Wordpress Gutenberg as a Laravel Nova field type",
   "type": "library",
   "keywords": [
     "laravel",
